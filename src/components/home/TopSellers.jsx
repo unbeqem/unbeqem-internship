@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Skeleton from "../UI/Skeleton";
+
 const TopSellers = () => {
   const [sellers, setSellers] = useState([]);
   async function main() {
