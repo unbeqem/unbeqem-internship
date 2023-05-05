@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Countdown from "react-countdown";
 import Skeleton from "../UI/Skeleton";
+import CountdownTimer from "../UI/Countdowntimer";
 
 const ExploreItems = () => {
   const [exploreItems, setExploreItems] = useState([]);
@@ -83,7 +83,7 @@ const ExploreItems = () => {
                 {item.expiryDate ? (
                   <div className='de_countdown'>
                     {calMilisecond(item.expiryDate) > 0 ? (
-                      <Countdown date={item.expiryDate} />
+                      <CountdownTimer expiryDate={item.expiryDate} />
                     ) : (
                       <>Expired</>
                     )}

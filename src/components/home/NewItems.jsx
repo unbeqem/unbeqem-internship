@@ -5,7 +5,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import axios from "axios";
 import Skeleton from "../UI/Skeleton";
-import Countdown from "react-countdown";
+import CountdownTimer from "../UI/Countdowntimer";
 
 const NewItems = () => {
   const [items, setItems] = useState([]);
@@ -88,7 +88,7 @@ const NewItems = () => {
                       <div className='de_countdown'>
                         {calMilisecond(item.expiryDate) > 0 ? (
                           <>
-                            <Countdown date={item.expiryDate} />
+                            <CountdownTimer expiryDate={item.expiryDate} />
                           </>
                         ) : (
                           <>Expired</>
