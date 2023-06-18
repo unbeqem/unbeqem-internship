@@ -11,6 +11,7 @@ const ExploreItems = () => {
   const showMoreItems = () => {
     setVisible((preVal) => preVal + 4);
   };
+  
   async function main() {
     const { data } = await axios.get(
       "https://us-central1-nft-cloud-functions.cloudfunctions.net/explore"
